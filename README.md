@@ -2,7 +2,7 @@
 
 Un juego multijugador en tiempo real de piedra, papel o tijera desarrollado con Node.js, Express y Socket.io.
 
-## 🚀 Características
+##  Características
 
 - **Dos pantallas separadas**: Una para mostrar resultados y otra para que los jugadores hagan sus elecciones
 - **Comunicación en tiempo real** con Socket.io
@@ -11,27 +11,20 @@ Un juego multijugador en tiempo real de piedra, papel o tijera desarrollado con 
 - **Indicador de conexión** en tiempo real
 - **Soporte para múltiples rondas** y reinicio del juego
 
-## 📋 Requisitos
+##  Requisitos
 
 - Node.js (versión 14 o superior)
 - npm o yarn
 
-## 🛠️ Instalación
+##  Instalación
+1.npm install
 
-1. Clona o descarga el proyecto
-2. Instala las dependencias:
-```bash
-npm install
-```
+2.npm start
 
-3. Inicia el servidor:
-```bash
-npm start
-```
 
 El servidor se ejecutará en `http://localhost:5050`
 
-## 🎮 Cómo jugar
+##  Cómo jugar
 
 ### Pantalla de Resultados (App1)
 - **URL**: `http://localhost:5050/app1`
@@ -47,7 +40,7 @@ El servidor se ejecutará en `http://localhost:5050`
 - Muestra el estado actual del jugador seleccionado
 - Actualización en tiempo real del estado del juego
 
-## 🎯 Reglas del Juego
+##  Reglas del Juego
 
 1. **Piedra** 🪨 vence a **Tijera** ✂️
 2. **Papel** 📄 vence a **Piedra** 🪨
@@ -74,7 +67,7 @@ Inicia una nueva ronda.
 ### POST `/reset-game`
 Reinicia el juego completo.
 
-## 🔌 Eventos de Socket.io
+##  Eventos de Socket.io
 
 - `game-state`: Estado inicial del juego
 - `game-update`: Actualización del estado del juego
@@ -82,33 +75,18 @@ Reinicia el juego completo.
 - `new-round`: Nueva ronda iniciada
 - `game-reset`: Juego reiniciado
 
-## 🎨 Tecnologías Utilizadas
+##  Tecnologías Utilizadas
 
 - **Backend**: Node.js, Express.js
 - **WebSockets**: Socket.io
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+)
 - **Estilos**: CSS Grid, Flexbox, Gradientes, Animaciones
 
-## 📱 Diseño Responsivo
 
-El juego está optimizado para:
-- Escritorio (1200px+)
-- Tablet (768px - 1199px)
-- Móvil (320px - 767px)
-
-## 🚀 Funcionalidades Avanzadas
+##  Funcionalidades Avanzadas
 
 - **Sincronización en tiempo real** entre ambas pantallas
 - **Indicadores visuales** de conexión
-- **Animaciones suaves** y transiciones
 - **Feedback visual** inmediato para las acciones del usuario
 - **Sistema de estados** robusto para manejar diferentes fases del juego
 
-## 🎯 Cómo usar en producción
-
-1. Configura las variables de entorno necesarias
-2. Ajusta la configuración de CORS según tus necesidades
-3. Implementa autenticación si es necesario
-4. Configura un proxy reverso (nginx) si planeas servir múltiples instancias
-
-¡Disfruta jugando! 🎉
