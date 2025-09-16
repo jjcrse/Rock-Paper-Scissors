@@ -90,3 +90,4 @@ Reinicia el juego completo.
 - **Feedback visual** inmediato para las acciones del usuario
 - **Sistema de estados** robusto para manejar diferentes fases del juego
 
+Dale Edward animate a jugar
