@@ -1,6 +1,6 @@
 # 🪨 📄 ✂️ Juego de Piedra, Papel o Tijera con Socket.io
 
-Un juego multijugador en tiempo real de piedra, papel o tijera desarrollado con Node.js, Express y Socket.io.
+Un juego multijugador en tiempo real de piedra, papel o tijera desarrollado con Node.js,  y Socket.io.
 
 ##  Características
 
@@ -13,8 +13,8 @@ Un juego multijugador en tiempo real de piedra, papel o tijera desarrollado con 
 
 ##  Requisitos
 
-- Node.js (versión 14 o superior)
-- npm o yarn
+- Node.js 
+- npm 
 
 ##  Instalación
 1.npm install
