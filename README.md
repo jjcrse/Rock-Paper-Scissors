@@ -77,7 +77,7 @@ Reinicia el juego completo.
 
 ##  Tecnologías Utilizadas
 
-- **Backend**: Node.js, Express.js
+- **Backend**: Node.js, 
 - **WebSockets**: Socket.io
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+)
 - **Estilos**: CSS Grid, Flexbox, Gradientes, Animaciones
