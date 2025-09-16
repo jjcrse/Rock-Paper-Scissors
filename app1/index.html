@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel o Tijera - Pantalla de Resultados</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAD//wAAKysrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREREREREREREREREREREREAAAAAAAAREQEREREREBERAQAAAAAQEREBAAAAABAREQEBEAEQEBERAQEQARAQEREBARABEBAREQEBEAEQEBERAQAAAAAQEREBAAAAABAREQEREREREBERAAAAAAAAEREREREREREREREREREREREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        rel="icon" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🪨 📄 ✂️ Piedra, Papel o Tijera</h1>
+            <h2>Pantalla de Resultados</h2>
+        </header>
+
+        <div class="game-info">
+            <div class="round-info">
+                <h3>Ronda <span id="current-round">1</span></h3>
+            </div>
+            
+            <div class="scores">
+                <div class="player-score">
+                    <h4>Jugador 1</h4>
+                    <div class="score" id="player1-score">0</div>
+                </div>
+                <div class="vs">VS</div>
+                <div class="player-score">
+                    <h4>Jugador 2</h4>
+                    <div class="score" id="player2-score">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-status">
+            <div id="waiting-status" class="status-message">
+                <p>Esperando que los jugadores hagan su elección...</p>
+            </div>
+            
+            <div id="playing-status" class="status-message hidden">
+                <p>Los jugadores están eligiendo...</p>
+            </div>
+            
+            <div id="finished-status" class="status-message hidden">
+                <div class="result-display">
+                    <h3>Resultado de la Ronda</h3>
+                    <div class="choices">
+                        <div class="choice-display">
+                            <div class="choice-icon" id="player1-choice-icon">❓</div>
+                            <p>Jugador 1</p>
+                        </div>
+                        <div class="vs-small">VS</div>
+                        <div class="choice-display">
+                            <div class="choice-icon" id="player2-choice-icon">❓</div>
+                            <p>Jugador 2</p>
+                        </div>
+                    </div>
+                    <div class="winner-announcement" id="winner-announcement">
+                        <h2 id="winner-text">¡Empate!</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="new-round-btn" class="btn btn-primary">Nueva Ronda</button>
+            <button id="reset-game-btn" class="btn btn-secondary">Reiniciar Juego</button>
+        </div>
+
+        <div class="connection-status">
+            <div id="connection-indicator" class="indicator disconnected">
+                <span class="dot"></span>
+                <span>Desconectado</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

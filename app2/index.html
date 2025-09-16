@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel o Tijera - Pantalla de Jugadores</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAD//wAAKysrAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREREREREREREREREREREREAAAAAAAAREQEREREREBERAQAAAAAQEREBAAAAABAREQEBEAEQEBERAQEQARAQEREBARABEBAREQEBEAEQEBERAQAAAAAQEREBAAAAABAREQEREREREBERAAAAAAAAEREREREREREREREREREREREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        rel="icon" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🪨 📄 ✂️ Piedra, Papel o Tijera</h1>
+            <h2>Pantalla de Jugadores</h2>
+        </header>
+
+        <div class="player-selection">
+            <h3>Selecciona tu jugador:</h3>
+            <div class="player-buttons">
+                <button id="select-player1" class="btn btn-player active">Jugador 1</button>
+                <button id="select-player2" class="btn btn-player">Jugador 2</button>
+            </div>
+        </div>
+
+        <div class="game-area">
+            <div class="current-player">
+                <h3>Jugador actual: <span id="current-player-name">Jugador 1</span></h3>
+                <div class="player-status" id="player-status">
+                    <p>Esperando tu elección...</p>
+                </div>
+            </div>
+
+            <div class="choices-area">
+                <h4>Elige tu opción:</h4>
+                <div class="choice-buttons">
+                    <button class="choice-btn" data-choice="rock">
+                        <span class="choice-icon">🪨</span>
+                        <span class="choice-text">Piedra</span>
+                    </button>
+                    <button class="choice-btn" data-choice="paper">
+                        <span class="choice-icon">📄</span>
+                        <span class="choice-text">Papel</span>
+                    </button>
+                    <button class="choice-btn" data-choice="scissors">
+                        <span class="choice-icon">✂️</span>
+                        <span class="choice-text">Tijera</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="game-info">
+                <div class="round-info">
+                    <h4>Ronda <span id="current-round">1</span></h4>
+                </div>
+                <div class="scores">
+                    <div class="score-item">
+                        <span>Jugador 1:</span>
+                        <span id="player1-score">0</span>
+                    </div>
+                    <div class="score-item">
+                        <span>Jugador 2:</span>
+                        <span id="player2-score">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="connection-status">
+            <div id="connection-indicator" class="indicator disconnected">
+                <span class="dot"></span>
+                <span>Desconectado</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
